@@ -1,0 +1,13 @@
+import keyboard
+import pyperclip
+
+
+paste=pyperclip.paste()
+
+def hotkey_pressed():
+    paste=pyperclip.paste()
+    keyboard.write(paste.replace(':',''))
+
+keyboard.add_hotkey('ctrl+shift+1', hotkey_pressed)
+
+keyboard.wait()
